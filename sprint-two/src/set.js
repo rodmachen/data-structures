@@ -1,4 +1,4 @@
-var Set = function(){
+var Set = function() {
   var set = Object.create(setPrototype);
   set._storage = {};
   return set;
@@ -6,15 +6,15 @@ var Set = function(){
 
 var setPrototype = {};
 
-setPrototype.add = function(item){
+setPrototype.add = function(item) {
   this._storage[item] = item;
 };
 
-setPrototype.contains = function(item){
+setPrototype.contains = function(item) {
   return this._storage.hasOwnProperty(item);
 };
 
-setPrototype.remove = function(item){
+setPrototype.remove = function(item) {
   delete this._storage[item];
 };
 
@@ -23,5 +23,5 @@ setPrototype.remove = function(item){
 // contains: constant;
 // remove: constant;
 //
-// Because this is implemented as an object, it uses the features of a hash table, 
-// thus achieving constant time complexity.
+// Because this is implemented as an object, it uses the features of a
+// hash table, thus achieving constant time complexity.

@@ -1,9 +1,9 @@
-var LinkedList = function(){
+var LinkedList = function() {
   var list = {};
   list.head = null;
   list.tail = null;
 
-  list.addToTail = function(value){
+  list.addToTail = function(value) {
     if (!this.tail) {
       this.tail = Node(value);
       this.head = this.tail;
@@ -13,7 +13,7 @@ var LinkedList = function(){
     }
   };
 
-  list.removeHead = function(){
+  list.removeHead = function() {
     var temp = this.head;
 
     if (this.head.next) {
@@ -22,7 +22,7 @@ var LinkedList = function(){
     return temp.value;
   };
 
-  list.contains = function(target){
+  list.contains = function(target) {
     var node = list.head;
     while (node) {
       if (node.value === target) {
@@ -36,7 +36,7 @@ var LinkedList = function(){
   return list;
 };
 
-var Node = function(value){
+var Node = function(value) {
   var node = {};
 
   node.value = value;

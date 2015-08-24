@@ -1,4 +1,4 @@
-var BinarySearchTree = function(value){
+var BinarySearchTree = function(value) {
   var tree = Object.create(binarySearchTreeMethods);
   tree.value = value;
   tree.right = null;
@@ -9,7 +9,7 @@ var BinarySearchTree = function(value){
 
 var binarySearchTreeMethods = {};
 
-binarySearchTreeMethods.insert = function (value) {
+binarySearchTreeMethods.insert = function(value) {
   var location = this;
   while (location) {
     if (value > location.value) {
@@ -32,7 +32,7 @@ binarySearchTreeMethods.insert = function (value) {
   }
 };
 
-binarySearchTreeMethods.contains = function (target) {
+binarySearchTreeMethods.contains = function(target) {
   var location = this;
   while (location) {
     if (location.value === target) {
@@ -49,7 +49,7 @@ binarySearchTreeMethods.contains = function (target) {
   return false;
 };
 
-binarySearchTreeMethods.depthFirstLog = function (cb) {
+binarySearchTreeMethods.depthFirstLog = function(cb) {
   cb(this.value);
   if (this.left) {
     this.left.depthFirstLog(cb);
@@ -64,4 +64,3 @@ binarySearchTreeMethods.depthFirstLog = function (cb) {
 // insert: linear
 // contains: logarithmic
 // depthFirstLog: linear
- 
